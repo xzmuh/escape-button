@@ -16,11 +16,10 @@
 .main span{
     color: #b77fef;
     font-size: 25px;
-
 }
 
 .centrao{
-    width: 100vw;
+    width: 100vh;
     height: 100vh; 
     display: flex;
     flex-direction: column;
