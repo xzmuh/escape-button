@@ -1,0 +1,150 @@
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+
+*{
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main{
+    /* background-color: #FAF7FD; */
+    justify-content: center;
+    align-items: center;
+}
+
+.main span{
+    color: #b77fef;
+    font-size: 25px;
+
+}
+
+.centrao{
+    width: 100vw;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f4ff;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    /* background-color: #FAF7FD; */
+}
+
+.btnPrincipal {
+    position: relative;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(43, 42, 42);
+    margin: 40px;
+    text-decoration: none;
+    transition: 2s;
+    border-radius: 2px;
+    color: rgb(43, 42, 42);
+    overflow: hidden;
+}
+
+.btnPrincipal:hover {
+    background: var(--clr);
+    box-shadow: 0 0 10px var(--clr),
+    0 0 30px var(--clr),
+    0 0 60px var(--clr),
+    0 0 100px var(--clr);
+}
+
+.btnPrincipal::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 400%;
+    background: var(--clr);
+    transition: 1s;
+    animation: animate 2s linear infinite;
+    animation-delay: calc(0.33s * var(--i));
+}
+
+.btnPrincipal:hover::before {
+    width: 120%;
+}
+
+.btnPrincipal::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    color: rgb(43, 42, 42);
+    background-color: rgb(253, 253, 253);
+}
+
+span div .btnPrincipal{
+    color: rgb(43, 42, 42);
+    z-index: 1;
+}
+
+.btnPrincipal:hover .textButton{
+    color: var(--clr);
+    z-index: 1;
+    transition: 0.5s;
+}
+  
+  @media (min-width: 500px) {
+	ul {
+	  grid-auto-flow: column;
+	}
+  }
+  
+  a {
+	color: rgb(43, 42, 42);
+	text-decoration: none;
+	z-index: 1;
+  }	
+
+  *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif; 
+}
+
+@keyframes animate {
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes text_reveal_box {
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        left: 0;
+        width: 100%;
+    }
+}
+
+@keyframes text_reveal {
+    100%{
+        color: rgb(43, 42, 42);
+    }
+}
+
+
+:root{
+    --clr: #dd92ff;
+}
+
+
