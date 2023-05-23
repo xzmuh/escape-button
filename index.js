@@ -3,6 +3,7 @@ const nao = window.document.getElementById("opcNo")
 const fundo = window.document.getElementById("area")
 const resp = window.document.getElementById("textinho")
 const maintxt = window.document.getElementById("maintxt")
+const pyroDiv = window.document.getElementById("pyro")
 
 nao.addEventListener("mouseenter", entrar)
 let estado = -1
@@ -44,7 +45,7 @@ function clicar(){
     maintxt.innerHTML =""
     sim.style.transform="translate(0px)"
     nao.style.transform="translate(0px, 0px)"
-
+    pyroDiv.style.display="block";
 }
 
 botaoSim.setFocusable(false);
